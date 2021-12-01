@@ -16,6 +16,17 @@ $(document).ready(() => {
         displayWeather(data)
     }
 
+    // get image function
+    function getImage(img) {
+        if (img == 'Rain') return './assets/Images/rainy.png'
+        if (img == 'Clouds') return './assets/Images/cloudy.png'
+        if (img == 'Sunny') return './assets/Images/sunny.png'
+        if (img == 'Clear') return './assets/Images/clear.png'
+        if (img == 'Mist') return './assets/Images/mist.png'
+        if (img == "Smoke") return './assets/Images/smoke.png'
+        if (img == "drizzle") return './assets/Images/drizzle.png'
+    }
+
     // on form submit function
     $('form').submit((e) => {
         e.preventDefault();
