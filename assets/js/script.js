@@ -38,6 +38,41 @@ $(document).ready(() => {
         if (col == "Smoke") return '#fa8072'
     }
 
+    // display weather details
+    function displayWeather(data) {
+        if(data) {
+            $('.sorry').hide()
+            var content =  `
+            <p>Today, ${d + ' ' + months[m-1]}</p>
+            <h2>${data.name}</h2>
+            <div class="image">
+                <img src="${getImage(data.weather[0].main)}" alt="Whether">
+                <h3>${data.weather[0].main}</h3>
+            </div>
+            <ul>
+                <li>
+                    <small>Wind</small>
+                    <h4>${data.wind.speed} m/s</h4>
+                </li>
+                <li>
+                    <small>Temp</small>
+                    <h4>${Math.round(data.main.temp / 274)}<span>&#8451;</span></h4>
+                </li>
+                <li>
+                    <small>Humidity</small>
+                    <h4>${data.main.humidity}%</h4>
+                </li>
+            </ul>
+            `;
+
+            $('main .wrapper').html(content)
+            $('main .wrapper').fadeIn('slow')
+            $('body').css('background', `${bodyColor(data.weather[0].main)}`);
+        } else {
+            $('.sorry').fadeIn()
+        }
+    }
+
     // on form submit function
     $('form').submit((e) => {
         e.preventDefault();
