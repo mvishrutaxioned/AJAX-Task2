@@ -117,8 +117,14 @@ header .wrapper { text-align: center; }
 form {
   width: 100%;
   margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -152,12 +158,81 @@ form button {
   main styling starts here
 =================================*/
 
-
-
-
-
-
-
+main .wrapper {
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  main p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  main h2 {
+    font-weight: bold;
+    font-size: 26px;
+  }
+  
+  .image { text-align: center; }
+  
+  .image img {
+    width: 20%;
+    margin-top: 30px;
+  }
+  
+  h3{
+    font-size: 46px;
+    font-weight: 600;
+  }
+  
+  ul {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  li {
+    width: 90px;
+    height: 70px;
+    margin: 0 15px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #e6e3e3;
+  }
+  
+  li small { font-size: 14px; }
+  li h4 { font-weight: 600; }
+  
+  .sorry {
+    display: none;
+    font-size: 44px;
+    text-align: center;
+  }
 
 /*=================================
   main styling ends here
