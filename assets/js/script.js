@@ -47,7 +47,7 @@ $(document).ready(() => {
             <p>Today, ${d + ' ' + months[m-1]}</p>
             <h2>${data.name}</h2>
             <div class="image">
-                <img src="${getImage(data.weather[0].main)}" alt="Whether">
+                <img src="${getImage(data.weather[0].main)}" alt="Weather">
                 <h3>${data.weather[0].main}</h3>
             </div>
             <ul>
@@ -66,8 +66,8 @@ $(document).ready(() => {
             </ul>
             `;
 
-            $('main .wrapper').html(content)
-            $('main .wrapper').fadeIn('slow')
+            $('.content .wrapper').html(content)
+            $('.content .wrapper').fadeIn('slow')
             $('body').css('background', `${bodyColor(data.weather[0].main)}`);
         } else {
             $('.sorry').fadeIn()
@@ -78,7 +78,7 @@ $(document).ready(() => {
     $('form').submit((e) => {
         e.preventDefault();
 
-        $('main .wrapper').fadeOut('fast')
+        $('.content .wrapper').fadeOut('fast')
         inputVal = $('form input').val();
         fetchResults(inputVal);
     })
