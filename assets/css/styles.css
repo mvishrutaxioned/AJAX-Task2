@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -82,7 +84,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a { 
@@ -148,6 +150,11 @@ form button {
   font-weight: bold;
   font-family: "Poppins";
   outline: none;
+  transition: .5s ease;
+}
+
+form button:hover {
+  transform: scale(.70);
 }
 
 /*=================================

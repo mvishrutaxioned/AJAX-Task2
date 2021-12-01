@@ -25,6 +25,7 @@ $(document).ready(() => {
         if (img == 'Mist') return './assets/Images/mist.png'
         if (img == "Smoke") return './assets/Images/smoke.png'
         if (img == "drizzle") return './assets/Images/drizzle.png'
+        return './assets/Images/clear.png'
     }
 
     // get body color function
@@ -40,7 +41,7 @@ $(document).ready(() => {
 
     // display weather details
     function displayWeather(data) {
-        if(data) {
+        if(data.name) {
             $('.sorry').hide()
             var content =  `
             <p>Today, ${d + ' ' + months[m-1]}</p>
