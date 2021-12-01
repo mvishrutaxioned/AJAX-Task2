@@ -27,6 +27,17 @@ $(document).ready(() => {
         if (img == "drizzle") return './assets/Images/drizzle.png'
     }
 
+    // get body color function
+    function bodyColor(col) {
+        if (col == 'Rain') return '#fff'
+        if (col == 'Clouds') return '#b6b6b4'
+        if (col == 'Sunny') return '#f5e216'
+        if (col == 'Clear') return '#82caff'
+        if (col == 'Mist') return '#646d7e'
+        if (col == "Smoke") return '#726e6d'
+        if (col == "Smoke") return '#fa8072'
+    }
+
     // on form submit function
     $('form').submit((e) => {
         e.preventDefault();
