@@ -12,8 +12,12 @@ $(document).ready(() => {
     // fetch results function
     async function fetchResults(i) {
         var url = `https://api.openweathermap.org/data/2.5/weather?q=${i}&appid=4b9ffb45e1734ffac3f5a513794a0f0d`
-        var data = await fetch(url).then(res => res.json()).catch(e => e)
-        displayWeather(data)
+        var data = await fetch(url).then(res => res.json()).catch(e => console.log('hello'))
+        if(data.name) {
+            displayWeather(data)
+        } else {
+            $('.sorry').fadeIn()
+        }
     }
 
     // get image function
@@ -41,37 +45,33 @@ $(document).ready(() => {
 
     // display weather details
     function displayWeather(data) {
-        if(data.name) {
-            $('.sorry').hide()
-            var content =  `
-            <p>Today, ${d + ' ' + months[m-1]}</p>
-            <h2>${data.name}</h2>
-            <div class="image">
-                <img src="${getImage(data.weather[0].main)}" alt="Weather">
-                <h3>${data.weather[0].main}</h3>
-            </div>
-            <ul>
-                <li>
-                    <small>Wind</small>
-                    <h4>${data.wind.speed} m/s</h4>
-                </li>
-                <li>
-                    <small>Temp</small>
-                    <h4>${Math.round(data.main.temp / 274)}<span>&#8451;</span></h4>
-                </li>
-                <li>
-                    <small>Humidity</small>
-                    <h4>${data.main.humidity}%</h4>
-                </li>
-            </ul>
-            `;
+        $('.sorry').hide();
+        var content =  `
+        <p>Today, ${d + ' ' + months[m-1]}</p>
+        <h2>${data.name}</h2>
+        <div class="image">
+            <img src="${getImage(data.weather[0].main)}" alt="Weather">
+            <h3>${data.weather[0].main}</h3>
+        </div>
+        <ul>
+            <li>
+                <small>Wind</small>
+                <h4>${data.wind.speed} m/s</h4>
+            </li>
+            <li>
+                <small>Temp</small>
+                <h4>${Math.round(data.main.temp / 274)}<span>&#8451;</span></h4>
+            </li>
+            <li>
+                <small>Humidity</small>
+                <h4>${data.main.humidity}%</h4>
+            </li>
+        </ul>
+        `;
 
-            $('.content .wrapper').html(content)
-            $('.content .wrapper').fadeIn('slow')
-            $('body').css('background', `${bodyColor(data.weather[0].main)}`);
-        } else {
-            $('.sorry').fadeIn()
-        }
+        $('.content .wrapper').html(content)
+        $('.content .wrapper').fadeIn('slow')
+        $('body').css('background', `${bodyColor(data.weather[0].main)}`);
     }
 
     // on form submit function

@@ -183,7 +183,7 @@ form button:hover {
 }
 
 .content h2 {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 26px;
 }
 
@@ -234,7 +234,7 @@ li {
 li small { font-size: 14px; }
 li h4 { font-weight: 600; }
 
-.sorry {
+.content .sorry {
     display: none;
     font-size: 44px;
     text-align: center;
