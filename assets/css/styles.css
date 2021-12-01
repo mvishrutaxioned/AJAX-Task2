@@ -114,30 +114,30 @@ li {
   Header styling starts here
 =================================*/
 
-header .wrapper { text-align: center; }
+.header .wrapper { text-align: center; }
 
 form {
-  width: 100%;
-  margin: 40px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+    width: 100%;
+    margin: 40px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 form input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #666;
-  border-radius: 10px;
-  background: #fff;
-  font-family: "Poppins", sans-serif;
-  outline: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+    outline: none;
 }
 
 form button {
@@ -165,10 +165,9 @@ form button:hover {
   main styling starts here
 =================================*/
 
-main .wrapper {
+.content .wrapper {
     width: 50%;
     margin: 0 auto;
-    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -176,31 +175,31 @@ main .wrapper {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-  
-  main p {
+}
+
+.content p {
     font-size: 14px;
     color: #666;
-  }
-  
-  main h2 {
+}
+
+.content h2 {
     font-weight: bold;
     font-size: 26px;
-  }
-  
-  .image { text-align: center; }
-  
-  .image img {
+}
+
+.image { text-align: center; }
+
+.image img {
     width: 20%;
     margin-top: 30px;
-  }
-  
-  h3{
+}
+
+h3{
     font-size: 46px;
     font-weight: 600;
-  }
-  
-  ul {
+}
+
+ul {
     margin-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -212,9 +211,9 @@ main .wrapper {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-  }
-  
-  li {
+}
+
+li {
     width: 90px;
     height: 70px;
     margin: 0 15px;
@@ -230,16 +229,16 @@ main .wrapper {
     -ms-flex-pack: center;
     justify-content: center;
     background: #e6e3e3;
-  }
-  
-  li small { font-size: 14px; }
-  li h4 { font-weight: 600; }
-  
-  .sorry {
+}
+
+li small { font-size: 14px; }
+li h4 { font-weight: 600; }
+
+.sorry {
     display: none;
     font-size: 44px;
     text-align: center;
-  }
+}
 
 /*=================================
   main styling ends here
@@ -248,10 +247,10 @@ main .wrapper {
 /*media query starts*/
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
-    main .wrapper { width: 75%; }
+    main .content .wrapper { width: 75%; }
 }
   
 /*media query for 540px starts here*/
 @media only screen and (max-width: 540px) {
-    main .wrapper { width: 95%; }
-}  
+    main .content .wrapper { width: 95%; }
+}
