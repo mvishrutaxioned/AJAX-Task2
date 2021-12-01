@@ -238,24 +238,13 @@ main .wrapper {
   main styling ends here
 =================================*/
 
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+    main .wrapper { width: 75%; }
+}
+  
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+    main .wrapper { width: 95%; }
 }  
